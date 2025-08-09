@@ -8,8 +8,10 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
     margin: 0;
-    background: url('https://i.pinimg.com/736x/37/04/bf/3704bf2545f4da31ad295aba6774c248.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: url('https://i.imgur.com/Tcg39BP.jpg') no-repeat center center;
+    background-size: 100% auto;
+    background-attachment: scroll;
+    background-color: #111;
     color: white;
     -webkit-font-smoothing: antialiased;
   }
@@ -128,9 +130,12 @@
   // Detect iOS 6 or below by userAgent and add class to body
   (function() {
     const ua = navigator.userAgent;
-    const match = ua.match(/OS (\\d+)_/i);
+    const match = ua.match(/OS (\\d+)_/i) || ua.match(/OS (\\d+) /i);
     if (match && parseInt(match[1], 10) <= 6) {
       document.body.classList.add('ios6');
+      console.log('iOS 6 or lower detected');
+    } else {
+      console.log('Not iOS 6 or lower');
     }
   })();
 </script>
@@ -154,16 +159,16 @@
 
   <!-- Social media buttons -->
   <div class="social-links">
-    <a href="https://instagram.com/yourusername" target="_blank" class="glass-button" rel="noopener noreferrer">
+    <a href="https://instagram.com/fatkid5600" target="_blank" class="glass-button" rel="noopener noreferrer">
       Instagram
     </a>
-    <a href="https://tiktok.com/@yourusername" target="_blank" class="glass-button" rel="noopener noreferrer">
+    <a href="https://tiktok.com/@fatkid5600" target="_blank" class="glass-button" rel="noopener noreferrer">
       TikTok
     </a>
   </div>
 
   <footer>
-    Made with ❤️ on a jailbroken iPhone
+    Made with ❤️ on a 1,1 Macbook Pro
   </footer>
 </body>
 </html>
