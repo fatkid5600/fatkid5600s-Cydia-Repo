@@ -4,88 +4,166 @@
 <title>Fatkid5600's Cydia Repo for iOS 5-6+</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    body {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        background: url('https://i.pinimg.com/736x/37/04/bf/3704bf2545f4da31ad295aba6774c248.jpg') no-repeat center center fixed;
-        background-size: cover;
-        color: white;
-        -webkit-font-smoothing: antialiased;
-    }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    background: url('https://i.pinimg.com/736x/37/04/bf/3704bf2545f4da31ad295aba6774c248.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    h1 {
-        font-size: 2.2em;
-        margin-top: 40px;
-        text-shadow: 2px 2px 6px rgba(255, 0, 100, 0.7);
-        font-weight: 900;
-        letter-spacing: 1px;
-    }
+  h1 {
+    font-size: 2.2em;
+    margin-top: 40px;
+    text-shadow: 2px 2px 6px rgba(255, 0, 100, 0.7);
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
 
-    p {
-        font-size: 1.1em;
-        line-height: 1.6;
-    }
+  .manual {
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: #ccc;
+  }
 
-    a {
-        display: inline-block;
-        padding: 12px 25px;
-        background: linear-gradient(90deg, #ff007a, #ff4f00);
-        border-radius: 8px;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        box-shadow: 0 4px 15px rgba(255, 0, 122, 0.4);
-        transition: all 0.2s ease-in-out;
-    }
+  .manual b {
+    color: #fff;
+    font-weight: 700;
+  }
 
-    a:hover {
-        transform: scale(1.07);
-        box-shadow: 0 6px 25px rgba(255, 0, 122, 0.7);
-    }
+  .social-links {
+    margin-top: 25px;
+  }
 
-    .manual {
-        margin-top: 20px;
-        font-size: 0.95em;
-        color: #ccc;
-    }
+  /* Glass style buttons for modern iOS */
+  .glass-button {
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease-in-out;
+    background: rgba(255,255,255,0.15);
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
 
-    .manual b {
-        color: #fff;
-        font-weight: 700;
-    }
+  .glass-button:hover {
+    transform: scale(1.05);
+  }
 
-    .gloss {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 40%;
-        background: linear-gradient(rgba(255,255,255,0.3), transparent);
-        pointer-events: none;
-    }
+  .glass-button img {
+    display: block;
+    width: 150px; /* Adjust size if you want images */
+    height: auto;
+  }
 
-    footer {
-        font-size: 0.75em;
-        color: #777;
-        margin-top: 60px;
-        padding-bottom: 20px;
-    }
+  .glass-emoji {
+    font-size: 1.1em;
+    line-height: 1;
+    padding: 5px 8px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .glass-emoji:hover {
+    transform: scale(1.05);
+  }
+
+  /* Gloss overlay */
+  .gloss {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(rgba(255,255,255,0.3), transparent);
+    pointer-events: none;
+  }
+
+  footer {
+    font-size: 0.75em;
+    color: #777;
+    margin-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  /* iOS6 and below - override styles for system native buttons */
+  body.ios6 a.glass-button,
+  body.ios6 span.glass-emoji {
+    all: unset; /* reset all styles */
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background: #e6e6e6;
+    color: black;
+    font-weight: normal;
+    cursor: pointer;
+    text-decoration: none;
+    transition: none;
+  }
+
+  body.ios6 a.glass-button:hover,
+  body.ios6 span.glass-emoji:hover {
+    background: #d4d4d4;
+    transform: none;
+  }
 </style>
+<script>
+  function copyLink() {
+    const link = 'https://fatkid5600.github.io/fatkid5600s-Cydia-Repo/';
+    navigator.clipboard.writeText(link).then(() => {
+      alert('Link copied to clipboard!');
+    });
+  }
+
+  // Detect iOS 6 or below by userAgent and add class to body
+  (function() {
+    const ua = navigator.userAgent;
+    const match = ua.match(/OS (\\d+)_/i);
+    if (match && parseInt(match[1], 10) <= 6) {
+      document.body.classList.add('ios6');
+    }
+  })();
+</script>
 </head>
 <body>
-<div class="gloss"></div>
+  <div class="gloss"></div>
 
-<h1>Fatkid5600's Cydia Repo</h1>
+  <h1>Fatkid5600's Cydia Repo</h1>
 
-<p><a href="cydia://url/https://fatkid5600.github.io/fatkid5600s-Cydia-Repo/">📲 Add to Cydia</a></p>
+  <!-- Add to Cydia button - you can use image inside or just text -->
+  <a href="cydia://url/https://fatkid5600.github.io/fatkid5600s-Cydia-Repo/" class="glass-button">
+    📲 Add to Cydia
+  </a>
 
-<p class="manual">Or add manually in Cydia sources:<br>
-<b>https://fatkid5600.github.io/fatkid5600s-Cydia-Repo/</b></p>
+  <!-- Manual add + Copy Link emoji -->
+  <p class="manual">
+    Or add manually in Cydia sources:<br>
+    <b>https://fatkid5600.github.io/fatkid5600s-Cydia-Repo/</b>
+    <span onclick="copyLink()" class="glass-emoji" role="button" tabindex="0" aria-label="Copy Link">📋</span>
+  </p>
 
-<footer>
-Made with ❤️ on a jailbroken iPhone
-</footer>
+  <!-- Social media buttons -->
+  <div class="social-links">
+    <a href="https://instagram.com/yourusername" target="_blank" class="glass-button" rel="noopener noreferrer">
+      Instagram
+    </a>
+    <a href="https://tiktok.com/@yourusername" target="_blank" class="glass-button" rel="noopener noreferrer">
+      TikTok
+    </a>
+  </div>
 
+  <footer>
+    Made with ❤️ on a jailbroken iPhone
+  </footer>
 </body>
 </html>
