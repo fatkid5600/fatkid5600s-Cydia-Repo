@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fatkid5600's Cydia Repo for iOS 5-6+</title>
+<title>Fatkid5600's Cydia Repo for iOS 5 and 6+)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body {
@@ -39,30 +39,24 @@
     margin-top: 25px;
   }
 
-  /* Glass style buttons for modern iOS */
-  .glass-button {
+  /* Pink gradient Add to Cydia button */
+  .pink-button {
     display: inline-block;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.4);
-    transition: transform 0.2s ease-in-out;
-    background: rgba(255,255,255,0.15);
-    padding: 5px 10px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #ff007a, #ff4f00);
+    border-radius: 8px;
     color: white;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 0, 122, 0.4);
+    transition: all 0.2s ease-in-out;
+  }
+  .pink-button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 25px rgba(255, 0, 122, 0.7);
   }
 
-  .glass-button:hover {
-    transform: scale(1.05);
-  }
-
-  .glass-button img {
-    display: block;
-    width: 150px; /* Adjust size if you want images */
-    height: auto;
-  }
-
+  /* Glass style copy link button */
   .glass-emoji {
     font-size: 1.1em;
     line-height: 1;
@@ -73,10 +67,29 @@
     cursor: pointer;
     display: inline-block;
     transition: transform 0.2s ease-in-out;
+    margin-left: 8px;
   }
 
   .glass-emoji:hover {
     transform: scale(1.05);
+  }
+
+  .social-button {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease-in-out;
+  }
+  .social-button img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: block;
+  }
+  .social-button:hover {
+    transform: scale(1.1);
   }
 
   /* Gloss overlay */
@@ -98,9 +111,10 @@
   }
 
   /* iOS6 and below - override styles for system native buttons */
-  body.ios6 a.glass-button,
-  body.ios6 span.glass-emoji {
-    all: unset; /* reset all styles */
+  body.ios6 a.pink-button,
+  body.ios6 span.glass-emoji,
+  body.ios6 a.social-button {
+    all: unset; /* reset styles */
     display: inline-block;
     padding: 6px 12px;
     border: 1px solid #999;
@@ -111,10 +125,11 @@
     cursor: pointer;
     text-decoration: none;
     transition: none;
+    margin: 0 5px;
   }
-
-  body.ios6 a.glass-button:hover,
-  body.ios6 span.glass-emoji:hover {
+  body.ios6 a.pink-button:hover,
+  body.ios6 span.glass-emoji:hover,
+  body.ios6 a.social-button:hover {
     background: #d4d4d4;
     transform: none;
   }
@@ -127,15 +142,12 @@
     });
   }
 
-  // Detect iOS 6 or below by userAgent and add class to body
   (function() {
     const ua = navigator.userAgent;
     const match = ua.match(/OS (\\d+)_/i) || ua.match(/OS (\\d+) /i);
     if (match && parseInt(match[1], 10) <= 6) {
       document.body.classList.add('ios6');
       console.log('iOS 6 or lower detected');
-    } else {
-      console.log('Not iOS 6 or lower');
     }
   })();
 </script>
@@ -145,8 +157,8 @@
 
   <h1>Fatkid5600's Cydia Repo</h1>
 
-  <!-- Add to Cydia button - you can use image inside or just text -->
-  <a href="cydia://url/https://fatkid5600.github.io/fatkid5600s-Cydia-Repo/" class="glass-button">
+  <!-- Pink gradient Add to Cydia button -->
+  <a href="cydia://url/https://fatkid5600.github.io/fatkid5600s-Cydia-Repo/" class="pink-button">
     📲 Add to Cydia
   </a>
 
@@ -157,18 +169,18 @@
     <span onclick="copyLink()" class="glass-emoji" role="button" tabindex="0" aria-label="Copy Link">📋</span>
   </p>
 
-  <!-- Social media buttons -->
+  <!-- Social media buttons with images -->
   <div class="social-links">
-    <a href="https://instagram.com/fatkid5600" target="_blank" class="glass-button" rel="noopener noreferrer">
-      Instagram
+    <a href="https://instagram.com/fatkid5600" target="_blank" class="social-button" rel="noopener noreferrer">
+      <img src="https://purepng.com/public/uploads/large/21502363139brqka1urunxkb6fsykdwwbdsp41ilsn7kwdmaogpqzi3ja4m8ewca6aqx1hsluhgvvq2zhaxujjywzcnitprj0vcgrcheaj4srev.png" alt="Instagram">
     </a>
-    <a href="https://tiktok.com/@fatkid5600" target="_blank" class="glass-button" rel="noopener noreferrer">
-      TikTok
+    <a href="https://tiktok.com/@fatkid5600" target="_blank" class="social-button" rel="noopener noreferrer">
+      <img src="https://en.wikipedia.org/wiki/Musical.ly#/media/File:Musical.ly_vector_logo.svg" alt="TikTok">
     </a>
   </div>
 
   <footer>
-    Made with ❤️ on a 1,1 Macbook Pro
+    Made with ❤️ on a jailbroken iPhone
   </footer>
 </body>
 </html>
