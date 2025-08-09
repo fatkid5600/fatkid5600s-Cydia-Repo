@@ -1,0 +1,8 @@
+Origin: Fatkid5600s Cydia Repo
+Label: Fatkid5600s Repo
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm
+Components: main
+Description: Fatkid5600s Cydia Repo for iOS 5-6 and onwards
