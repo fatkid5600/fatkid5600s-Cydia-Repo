@@ -2,7 +2,7 @@ Package: com.fatkid5600.peeweepurpdranksoundboard
 Version: 1.0
 Architecture: iphoneos-armv7
 Maintainer: fatkid5600
-Depends: firmware (>= 5.1.1)
+Depends: firmware (>= 5.1)
 Filename: debs/Peeweepurpdranksoundboard.deb
 Size: 15791308
 MD5sum: 2ad49709485173d209625a04d02208cd
