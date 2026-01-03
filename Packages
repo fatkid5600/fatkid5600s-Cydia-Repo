@@ -1,13 +1,13 @@
 Package: com.fatkid5600.peeweepurpdranksoundboard
 Version: 1.0
-Architecture: iphoneos-arm
+Architecture: iphoneos-armv7
 Maintainer: fatkid5600
 Depends: firmware (>= 5.1.1)
-Filename: debs/Peeweepurpdranksooundboard.deb
-Size: 15735912
-MD5sum: 2987b8c2d68402d0df4e15cc8d3fec57
-SHA1: 9d3c9d7cd642e2335ba4a482cf31315af6c86e89
-SHA256: 03a698f2f3a4e52a5b9df6a6922984cdbfe3ed2943632413a317e3971f8ca14d
+Filename: debs/Peeweepurpdranksoundboard.deb
+Size: 15791308
+MD5sum: 2ad49709485173d209625a04d02208cd
+SHA1: f116ddedf319faf1d23e1d6093d4d4b1556a8d21
+SHA256: 887182daa669f10d04f7e695dd0e996ae1cbeca1d802cb1d0bdb640bbf5a8450
 Section: Games
 Description: The PeeWee Purpdrank Soundboard App for iOS 5.1.1+! Listen to the best PeeWeePurpdrank Quotes on your iPhone with the official soundboard app. More hilarious and iconic sounds will be added in future updates.
 Author: peeweepurpdrank & fatkid5600
